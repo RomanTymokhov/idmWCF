@@ -10,6 +10,7 @@ namespace IdemWCF
     {
         static void Main(string[] args)
         {
+            
         }
     }
 }
