@@ -14,9 +14,17 @@ namespace IdemWCF
         static void Main(string[] args)
         {
             var callback = new ClientCallback();
+
+            callback.InfoSended += info =>
+            {
+                Console.WriteLine(info);
+            };
+
             Service1Client service = new Service1Client(new InstanceContext(callback));
 
             service.CreateIdemAcount("tohoff82", "380660785635");
+
+            Console.Read();
         }
     }
 }

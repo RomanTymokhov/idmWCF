@@ -11,23 +11,24 @@ namespace IdemDbWcfService
     [ServiceBehavior(IncludeExceptionDetailInFaults = true, ConcurrencyMode = ConcurrencyMode.Multiple, InstanceContextMode = InstanceContextMode.Single)]
     public class Service1 : IService1
     {
-        IServerCallback serverCallback;
-
         public async void CreateIdemAcount(string email, string phone)
         {
             try
             {
-                using (idemDatabaseEntities dbProcessor = new idemDatabaseEntities())
+                using (idemDatabaseEntities proxy = new idemDatabaseEntities())
                 {
                     var queryStr = "insert into IdemAcount(email, phone) values ('" + email + "','" + phone + "');";
-                    dbProcessor.Database.ExecuteSqlCommand(queryStr);
-                    await dbProcessor.SaveChangesAsync();
+                    proxy.Database.ExecuteSqlCommand(queryStr);
+                    await proxy.SaveChangesAsync();
+
+                    var serverCalback = OperationContext.Current.GetCallbackChannel<IServerCallback>();
+                    serverCalback.SendInfo("idmUser Creating");
                 }
             }
             catch (Exception err)
             {
                 Console.WriteLine("{0} Exception caught.", err);
-                //loggeed this
+                //logged this
             }
         }
 

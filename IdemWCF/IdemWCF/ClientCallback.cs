@@ -1,4 +1,5 @@
-﻿using System;
+﻿using IdemWCF.IdemDbService;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.ServiceModel;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace IdemWCF
 {
-    class ClientCallback:IClientCallback
+    class ClientCallback:IService1Callback
     {
         public event Action<string> InfoSended;
 
