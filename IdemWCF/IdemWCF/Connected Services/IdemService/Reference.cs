@@ -8,52 +8,52 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace IdemWCF.IdemDbService {
+namespace IdemWCF.IdemService {
     
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="IdemDbService.IService1", CallbackContract=typeof(IdemWCF.IdemDbService.IService1Callback))]
-    public interface IService1 {
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="IdemService.IServiceDbWorker", CallbackContract=typeof(IdemWCF.IdemService.IServiceDbWorkerCallback))]
+    public interface IServiceDbWorker {
         
-        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IService1/CreateIdemAcount")]
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IServiceDbWorker/CreateIdemAcount")]
         void CreateIdemAcount(string email, string phone);
         
-        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IService1/CreateIdemAcount")]
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IServiceDbWorker/CreateIdemAcount")]
         System.Threading.Tasks.Task CreateIdemAcountAsync(string email, string phone);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface IService1Callback {
+    public interface IServiceDbWorkerCallback {
         
-        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IService1/SendInfo")]
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IServiceDbWorker/SendInfo")]
         void SendInfo(string info);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface IService1Channel : IdemWCF.IdemDbService.IService1, System.ServiceModel.IClientChannel {
+    public interface IServiceDbWorkerChannel : IdemWCF.IdemService.IServiceDbWorker, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class Service1Client : System.ServiceModel.DuplexClientBase<IdemWCF.IdemDbService.IService1>, IdemWCF.IdemDbService.IService1 {
+    public partial class ServiceDbWorkerClient : System.ServiceModel.DuplexClientBase<IdemWCF.IdemService.IServiceDbWorker>, IdemWCF.IdemService.IServiceDbWorker {
         
-        public Service1Client(System.ServiceModel.InstanceContext callbackInstance) : 
+        public ServiceDbWorkerClient(System.ServiceModel.InstanceContext callbackInstance) : 
                 base(callbackInstance) {
         }
         
-        public Service1Client(System.ServiceModel.InstanceContext callbackInstance, string endpointConfigurationName) : 
+        public ServiceDbWorkerClient(System.ServiceModel.InstanceContext callbackInstance, string endpointConfigurationName) : 
                 base(callbackInstance, endpointConfigurationName) {
         }
         
-        public Service1Client(System.ServiceModel.InstanceContext callbackInstance, string endpointConfigurationName, string remoteAddress) : 
+        public ServiceDbWorkerClient(System.ServiceModel.InstanceContext callbackInstance, string endpointConfigurationName, string remoteAddress) : 
                 base(callbackInstance, endpointConfigurationName, remoteAddress) {
         }
         
-        public Service1Client(System.ServiceModel.InstanceContext callbackInstance, string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
+        public ServiceDbWorkerClient(System.ServiceModel.InstanceContext callbackInstance, string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(callbackInstance, endpointConfigurationName, remoteAddress) {
         }
         
-        public Service1Client(System.ServiceModel.InstanceContext callbackInstance, System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
+        public ServiceDbWorkerClient(System.ServiceModel.InstanceContext callbackInstance, System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(callbackInstance, binding, remoteAddress) {
         }
         

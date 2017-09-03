@@ -45,22 +45,21 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClientCallback.cs" />
-    <Compile Include="Connected Services\IdemDbService\Reference.cs">
+    <Compile Include="Connected Services\IdemService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
-    <Compile Include="IClientCallback.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="Connected Services\IdemDbService\service.wsdl" />
-    <None Include="Connected Services\IdemDbService\service.xsd">
+    <None Include="Connected Services\IdemService\service.wsdl" />
+    <None Include="Connected Services\IdemService\service.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\IdemDbService\service1.xsd">
+    <None Include="Connected Services\IdemService\service1.xsd">
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
@@ -68,16 +67,16 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadataStorage Include="Connected Services\IdemDbService\" />
+    <WCFMetadataStorage Include="Connected Services\IdemService\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\IdemDbService\configuration91.svcinfo" />
+    <None Include="Connected Services\IdemService\configuration91.svcinfo" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\IdemDbService\configuration.svcinfo" />
+    <None Include="Connected Services\IdemService\configuration.svcinfo" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\IdemDbService\Reference.svcmap">
+    <None Include="Connected Services\IdemService\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>

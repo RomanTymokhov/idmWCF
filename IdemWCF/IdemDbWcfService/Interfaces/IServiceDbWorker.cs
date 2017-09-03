@@ -9,7 +9,7 @@ using System.Text;
 namespace IdemDbWcfService
 {
     [ServiceContract(CallbackContract = typeof(IServerCallback))]
-    public interface IService1
+    public interface IServiceDbWorker
     {
         [OperationContract(IsOneWay = true)]
         void CreateIdemAcount(string email, string phone);

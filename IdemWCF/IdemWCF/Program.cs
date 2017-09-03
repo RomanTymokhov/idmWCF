@@ -1,4 +1,4 @@
-﻿using IdemWCF.IdemDbService;
+﻿using IdemWCF.IdemService;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,7 +20,7 @@ namespace IdemWCF
                 Console.WriteLine(info);
             };
 
-            Service1Client service = new Service1Client(new InstanceContext(callback));
+            ServiceDbWorkerClient service = new ServiceDbWorkerClient(new InstanceContext(callback));
 
             service.CreateIdemAcount("tohoff82", "380660785635");
 

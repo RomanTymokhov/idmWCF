@@ -78,11 +78,11 @@
       <DependentUpon>IdemDatabase.edmx</DependentUpon>
       <LastGenOutput>IdemDatabase.cs</LastGenOutput>
     </Content>
-    <Content Include="Service1.svc" />
+    <Content Include="IEmplements\ServiceDbWorker.svc" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IServerCallback.cs" />
+    <Compile Include="Interfaces\IServerCallback.cs" />
     <Compile Include="IdemAcount.cs">
       <DependentUpon>IdemDatabase.tt</DependentUpon>
     </Compile>
@@ -101,11 +101,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>IdemDatabase.edmx</DependentUpon>
     </Compile>
-    <Compile Include="ServerCallback.cs" />
-    <Compile Include="Service1.svc.cs">
-      <DependentUpon>Service1.svc</DependentUpon>
+    <Compile Include="IEmplements\ServerCallback.cs" />
+    <Compile Include="IEmplements\ServiceDbWorker.svc.cs">
+      <DependentUpon>ServiceDbWorker.svc</DependentUpon>
     </Compile>
-    <Compile Include="IService1.cs" />
+    <Compile Include="Interfaces\IServiceDbWorker.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

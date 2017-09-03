@@ -9,7 +9,7 @@ using System.Text;
 namespace IdemDbWcfService
 {
     [ServiceBehavior(IncludeExceptionDetailInFaults = true, ConcurrencyMode = ConcurrencyMode.Multiple, InstanceContextMode = InstanceContextMode.Single)]
-    public class Service1 : IService1
+    public class Service1 : IServiceDbWorker
     {
         public async void CreateIdemAcount(string email, string phone)
         {
@@ -21,6 +21,7 @@ namespace IdemDbWcfService
                     proxy.Database.ExecuteSqlCommand(queryStr);
                     await proxy.SaveChangesAsync();
 
+                    //chek callback working
                     var serverCalback = OperationContext.Current.GetCallbackChannel<IServerCallback>();
                     serverCalback.SendInfo("idmUser Creating");
                 }
